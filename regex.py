@@ -24,13 +24,13 @@ def find_word(string_list):
 
     word_list = []
 
-    reg_exp = r'\b([A-Za-z]+)\d{3}([A-Za-z]+)'
+    regular_expression = r'\b([A-Za-z]+)\d{3}([A-Za-z]+)'
 
     # loop through each line of the string list
     for line in string_list:
 
     # find all the words that match the regular expression in each line
-        x = re.findall(reg_exp, line)
+        x = re.findall(regular_expression, line)
 
     # loop through the found words and add the words to your empty list
         for i in x:
@@ -46,13 +46,13 @@ def find_days(string_list):
     days = []
 
     # define the regular expression
-    reg_exp = r'(\b\d{1,2}[\/](\d{1,2})[\/](\d{4})\b)'
+    regular_expression = r'(\b\d{1,2}[\/](\d{1,2})[\/](\d{4})\b)'
 
     # loop through each line of the string list
     for line in string_list:
 
     # find all the dates that match the regular expression in each line
-        x = re.findall(reg_exp, line)
+        x = re.findall(regular_expression, line)
 
     # loop through the found dates and only add the days to your empty list 
         for i in x:
